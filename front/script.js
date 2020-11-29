@@ -10,11 +10,11 @@ window.onload = () => {
   const gridToggle = document.getElementById('toggle');
   const eraseButton = document.getElementById('erase');
   const state = {
-    resolution: {w: 60, h: 35},
-    pixel: 50,
+    resolution: {w: 15, h: 10},
+    pixel: 70,
     mouseDown: false,
     grid: true,
-    color: '#008080',
+    color: '#1DA1F2',
     fillColor: '#EAE1D0'
   };
 
@@ -31,16 +31,6 @@ window.onload = () => {
   document.addEventListener('mouseup', function(ev) {
     state.mouseDown = false;
     ctrlPanel.style.pointerEvents = 'auto';
-  });
-
-  load.addEventListener('submit', function(ev) {
-    ev.preventDefault();
-    state.resolution.w = this.width.value;
-    state.resolution.h = this.height.value;
-    renderCanvas(grid, state.resolution, state.pixel, function(ev) {
-      if (state.mouseDown || ev.type == 'click')
-        ev.target.style.backgroundColor = state.color;
-    });
   });
 
   zoom.addEventListener('input', function(ev) {
@@ -68,11 +58,6 @@ window.onload = () => {
     state.fillColor = state.color;
     this.style.color = state.color;
     styleChildren(grid, {backgroundColor: state.color});
-  });
-
-  eraseButton.addEventListener('click', function(ev) {
-    state.color = state.fillColor;
-    colorPicker.value = state.color;
   });
 
 };

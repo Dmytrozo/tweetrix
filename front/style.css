@@ -18,6 +18,7 @@ body > div {
 }
 
 #ctrl-panel {
+  z-index:1;
   user-select: none;
   position: fixed;
   width: 100%;
@@ -27,18 +28,8 @@ body > div {
 }
 
 #ctrl-l {
+  z-index:1;
   float: left;
-}
-
-#ctrl-r {
-  float: right;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-}
-
-#ctrl-r > div:first-child {
-  display: flex;
 }
 
 #ctrl-panel-r {
@@ -51,7 +42,11 @@ body > div {
 
 #grid {
   display: inline-block;
-  background-color: rgb(234, 225, 208);
+  background-color: #AAB8C2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #grid:active {
   cursor: pointer;
@@ -83,4 +78,8 @@ button:active {
 
 button:focus {
   outline: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #F5F8FA;
 }
