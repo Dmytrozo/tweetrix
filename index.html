@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="./front/style.css">
+  <script src="./front/render_canvas.js" charset="utf-8"></script>
+  <script src="./front/style_children.js" charset="utf-8"></script>
+  <script src="./front/script.js" charset="utf-8"></script>
+
+  <title>PAM</title>
+</head>
+<body>
+
+  <div id="all">
+
+    <div id="ctrl-panel">
+      <div id="ctrl-l">
+        <label>
+          Pixel
+          <input id="pixel" type="range" name="pixelSide" step="2" min="6" max="50" value="50">
+        </label>
+        <input id="color" type="color" value="#008080">
+      </div>
+
+      <div id="ctrl-r">
+        <div>
+          <form method="post">
+            <label>
+              Width
+              <input id="width" type="range" name="width" max="75">
+            </label>
+            <label>
+              Height
+              <input id="height" type="range" name="height" max="75">
+            </label>
+            <button type="submit" value="Load">Load</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="ctrl-panel-r">
+        <button id="fill" type="button">Fill</button>
+        <button id="toggle" type="button">Toggle Grid</button>
+        <button id="erase" type="button">Erase</button>
+      </div>
+
+    </div>
+
+
+    <div id="grid"></div>
+
+  </div>
+
+</body>
+</html>

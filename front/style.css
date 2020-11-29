@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(58, 55, 55);
+}
+
+body > div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#ctrl-panel {
+  user-select: none;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-wrap: row;
+  justify-content: space-between;
+}
+
+#ctrl-l {
+  float: left;
+}
+
+#ctrl-r {
+  float: right;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+#ctrl-r > div:first-child {
+  display: flex;
+}
+
+#ctrl-panel-r {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#grid {
+  display: inline-block;
+  background-color: rgb(234, 225, 208);
+}
+#grid:active {
+  cursor: pointer;
+}
+#grid > div {
+  float: left;
+  border: 1px solid grey;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(61, 61, 61);
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Roboto;
+  font-size:15px;
+  padding:11px 23px;
+  text-decoration:none;
+  text-shadow:0px -1px 0px #2b665e;
+}
+button:hover {
+  background-color:#6c7c7c;
+}
+button:active {
+  position:relative;
+  top:1px;
+}
+
+button:focus {
+  outline: none;
+}
