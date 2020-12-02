@@ -4,10 +4,10 @@
 #include "Adafruit_NeoPixel.h"
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIN, NEO_GRB + NEO_KHZ800);
 
-int rows = 15;    //rows number in led matrix
-int columns = 10;  //columns number in led matrix
+const int rows = 15;    //rows number in led matrix
+const int columns = 10;  //columns number in led matrix
 uint32_t color; 
-uint32_t picture[ 15 ][ 10 ] = { 
+uint32_t picture[ rows ][ columns ] = { 
   { 0x00ff00, 0x00ff00, 0x00ff00, 0xff0000, 0x000000, 0x000000, 0xff0000, 0x0000ff, 0x0000ff, 0x0000ff },
   { 0x000000, 0x00ff00, 0x000000, 0xff0000, 0x000000, 0x000000, 0xff0000, 0x0000ff, 0x0000ff, 0x0000ff },
   { 0x000000, 0x00ff00, 0x000000, 0xff0000, 0x000000, 0x000000, 0xff0000, 0x000000, 0x0000ff, 0x000000 },
